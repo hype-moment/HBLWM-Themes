@@ -51,7 +51,7 @@ case $opc in
 
 # Transparent options ================================================================================================
 	1 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/cyan ~/.config/herbstluftwm/autostart
-		feh --bg-scale /home/$USER/Images/Cyan.gilr.jpg
+		feh --bg-scale ~/Images/Cyan.gilr.jpg
 		pkill picom
 		herbstclient reload
 		Menu
@@ -155,6 +155,7 @@ case $opc in
 		;;
 	18 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/orange ~/.config/herbstluftwm/autostart;
 		feh --bg-scale /home/$USER/Images/Orange.car.jpg
+		pkill picom
 		herbstclient reload
 		Menu
 		;;
@@ -186,7 +187,7 @@ case $opc in
 		Menu
 		;;
 	23 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/purple ~/.config/herbstluftwm/autostart;
-		feh --bg-scale /home/$USER/Images/Purple.gilr.jpg
+		feh --bg-scale /home/$USER/Images/Purple.bird.jpg
 		pkill picom
 		herbstclient reload
 		Menu
