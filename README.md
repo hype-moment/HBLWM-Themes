@@ -1,5 +1,16 @@
 # HBLWM-Themes
 
+# Dependencies
+
+        -picom-rounded-corners
+            Picom is extremely important within these configurations. 
+            It is responsible for giving effects of 
+            "transparency, transition, shadows and rounded edges"
+        -xfce4-terminal
+            All customizations were made using "xfce4-terminal", 
+            so it is important to have it installed, 
+            for a better experience.
+            
 # Installation
 
 Follow the step by step below
