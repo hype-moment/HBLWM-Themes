@@ -1,0 +1,240 @@
+#!/usr/bin/env bash
+
+#==========================================================================================#
+# Name = HBL-Themes                                                                        #
+# Functions = Change themes and wallpapers of herbstluftwm automatically and in real time  #
+# Depences = feh                                                                           #
+# Optional dependencies = picom-rounded-corners                                            #
+# Author = Diego Cesare <diegocesare300491@gmail.com>                                      #
+#==========================================================================================#
+
+# menu variables
+
+sep="━━━━━━━━━━━━━━━"
+sep1="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+
+# menu
+
+Menu(){
+
+clear
+echo -e "$sep1"
+echo -e "$sep \033[1;31mHERBSTLUFTWM THEMES\033[m $sep"
+echo -e "$sep1"
+echo -e "$sep \033[1;31mTransparent themes \033[m $sep"
+echo ""
+echo "( 1 ) Cyan 	( 6 ) Red"
+echo "( 2 ) Pink 	( 7 ) Blue"
+echo "( 3 ) Purple 	( 8 ) Orange"
+echo "( 4 ) Green 	( 9 ) Cristal"
+echo "( 5 ) Yellow 	( 10) Black"
+echo "$sep1"
+echo -e "$sep \033[1;31m   Normal themes \033[m   $sep"
+echo "( 11 ) Cyan 	( 16 ) Red"
+echo "( 12 ) Pink 	( 17 ) Blue"
+echo "( 13 ) Purple 	( 18 ) Orange"
+echo "( 14 ) Green 	( 19 ) White"
+echo "( 15 ) Yellow 	( 20 ) Black"
+echo "$sep1"
+echo -e "$sep \033[1;31m   Rounded edges \033[m   $sep"
+echo "( 21 ) Cyan 	( 26 ) Red"
+echo "( 22 ) Pink 	( 27 ) Blue"
+echo "( 23 ) Purple 	( 28 ) Orange"
+echo "( 24 ) Green 	( 29 ) White"
+echo "( 25 ) Yellow 	( 30 ) Black"
+echo "$sep1"
+echo -e "Select theme >>> \c"
+
+read opc
+case $opc in
+
+# Transparent options ================================================================================================
+	1 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/cyan ~/.config/herbstluftwm/autostart
+		feh --bg-scale /home/$USER/Images/Cyan.gilr.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	2 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/pink ~/.config/herbstluftwm/autostart
+		feh --bg-scale /home/$USER/Images/Pink.girl.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	3 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/purple ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Purple.gilr.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	4 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/green ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Green.girl.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	5 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/yellow ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Yellow.girl.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	6 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/red ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Red.girl.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	7 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/blue ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Blue.gilr.jpg
+		herbstclient reload
+		Menu
+		;;
+	8 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/orange ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Orange.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	9 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/cristal ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Diamond.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	10 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/trans/black ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Black.girl.png
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+# Normal options =========================================================================================================
+
+	11 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/cyan ~/.config/herbstluftwm/autostart
+		feh --bg-scale /home/$USER/Images/Cyan.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	12 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/pink ~/.config/herbstluftwm/autostart
+		feh --bg-scale /home/$USER/Images/Pink.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	13 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/purple ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Purple.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	14 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/green ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Green.car.png
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	15 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/yellow ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Yellow.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	16 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/red ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Red.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	17 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/blue ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Blue.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	18 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/orange ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Orange.car.jpg
+		herbstclient reload
+		Menu
+		;;
+	19 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/cristal ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/White.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	20 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/normal/black ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Black.car.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+
+# Rounded options ==========================================================================================================
+	
+	21 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/cyan ~/.config/herbstluftwm/autostart
+		feh --bg-scale /home/$USER/Images/Cyan.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	22 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/pink ~/.config/herbstluftwm/autostart
+		feh --bg-scale /home/$USER/Images/Pink.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	23 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/purple ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Purple.gilr.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	24 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/green ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Green.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	25 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/yellow ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Yellow.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	26 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/red ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Red.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	27 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/blue ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Blue.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	28 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/orange ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Orange.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	29 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/cristal ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/White.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+	30 ) rm ~/.config/herbstluftwm/autostart && cp ~/.config/herbstluftwm/rounded/black ~/.config/herbstluftwm/autostart;
+		feh --bg-scale /home/$USER/Images/Black.bird.jpg
+		pkill picom
+		herbstclient reload
+		Menu
+		;;
+
+esac
+}
+
+Menu
